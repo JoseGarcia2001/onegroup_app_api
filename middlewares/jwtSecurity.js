@@ -2,8 +2,6 @@ const jwt = require('jsonwebtoken')
 
 const jwtSecurity = (req, res, next) => {
   try {
-    console.log(req.headers)
-    console.log(req.body)
     const authorization = req.headers.authorization || ''
 
     // Split the authorization in the first position

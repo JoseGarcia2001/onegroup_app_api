@@ -3,6 +3,7 @@ require('dotenv').config()
 const cors = require('cors')
 const path = require('path')
 const express = require('express')
+const fileUpload = require('express-fileupload')
 const manageError = require('./middlewares/manageError')
 const manage404 = require('./middlewares/manage404')
 const articlesRouter = require('./controllers/articles')
@@ -16,6 +17,7 @@ require('./mongo')
 
 app.use(cors())
 app.use(express.json())
+app.use(fileUpload())
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 //  End points
