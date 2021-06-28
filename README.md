@@ -26,7 +26,6 @@ En el directorio raiz crea un archivo .env (ver .env.example)
 Instala las dependencias y corre el servidor.
 
 ```sh
-cd onegroup_app_api
 npm i
 npm run dev
 ```
